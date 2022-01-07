@@ -1,0 +1,71 @@
+<html>
+    <head> 
+        <title>Titel van het document</title>
+    </head>
+    <body>
+        <h1>Header 1</h1>
+        <h2>Header 2</h2>
+        <h3>Header3</h3>
+        <h4>Header 4</h4>
+        <h5>Header 5</h5>
+        <h6>Header 6</h6>
+        <p>Paragraph test om een breuk in de alinea te maken <br> test om iets bolt te maken of ook genoemd in html codering <strong>strong</strong></p>
+        <hr>
+        <h1>Links testen</h1>
+        <a href="https://www.w3schools.com/" target="_blank">Link with target _blank -  Opens the document in a new window or tab</a>
+        <br><a href="https://www.w3schools.com/" target="_self"> Link with target _self Default. Opens the document in the same window/tab as it was clicked!</a>
+        <br><a href="https://www.w3schools.com/" target="_parent">Link with target _parent - Opens the document in the parent frame</a>
+        <br><a href="https://www.W3schools.com/" target="_top">Link with target _top - Opens the document in the full body of the window</a>
+        <p>Relative link</p>
+        <p>=Link on the same website also called a local link f.e. "html_images.asp" or "/css/default.asp"</p>
+        <p>Absolute link</p>
+        <p>=full web address</p>
+        <p>Use an image as a link</p>
+        <p>To use an image as a link, just put the <img> tag inside the <a> tag:</p>
+        <a href="kangaroo.jpg">
+        <img src="alien.jpg" alt="HTML tutorial" style="width:42px;height:42px;">
+        </a>
+        <p>Link to an e-mail adress</p>
+        <a href="mailto:someone@example.com">Send email</a>
+        <p>button as a link</p>
+        <p>to use a button as a link you need javascript!</p>
+        <!-- <button onclick="document.location='default.asp'">HTML Tutorial</button>-->
+        <p>Link Titles</p>
+        <a href="https://www.w3schools.com/html/" title="Titel van het document">Visit our HTML Tutorial</a>
+        <p>Summary</p>
+        <p>Chapter Summary <br>
+        Use the <a> element to define a link <br>
+        Use the href attribute to define the link address <br>
+        Use the target attribute to define where to open the linked document <br>
+        Use the <img> element (inside <a>) to use an image as a link <br>
+        Use the mailto: scheme inside the href attribute to create a link that opens the user's email program</p>
+        <!-- This is a comment -->
+        <h1>Tabellen</h1>
+        <caption>Naam van de tabel</caption>
+        <table>
+            <tbody>
+        <tr>
+            <thead>
+            <th>Header row 1</th>
+            <th>Header 2 row 1</th>
+        </thead>
+        </tr>
+        <tr> <tbody></tbody>
+            <td>rij 2 kolom 1 tabel data</td>
+            <td>rij2 kolom 2 tabel data</td>
+        </tbody>
+    <tr>
+        <tfoot>
+            <td>rij3kolom1</td>
+            <td>rij3 kolom2</td>
+        </tfoot>
+    </tr>
+
+</table>
+           <!-- This is a comment 
+            <colgroup>	Specifies a group of one or more columns in a table for formatting
+            <col>	Specifies column properties for each column within a <colgroup> element
+            Still gotta figure these ones out-->
+            
+</body>
+</html>

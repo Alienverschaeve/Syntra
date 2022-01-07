@@ -1,0 +1,249 @@
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "icons";
+  src: url("icons/fonts/icomoon.eot?8ajdsl");
+  src: url("icons/fonts/icomoon.eot?8ajdsl#iefix") format("embedded-opentype"),
+    url("icons/fonts/icomoon.ttf?8ajdsl") format("truetype"),
+    url("icons/fonts/icomoon.woff?8ajdsl") format("woff"),
+    url("icons/fonts/icomoon.svg?8ajdsl#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-unchecked:before {
+  content: "\e902";
+}
+
+.icon-remove:before {
+  content: "\e903";
+}
+
+.icon-add:before {
+  content: "\e901";
+}
+
+.icon-checked:before {
+  content: "\e900";
+}
+
+body {
+  background-color: #eef3f6;
+  font-family: roboto;
+}
+
+main {
+  width: 90%;
+  margin: 20px auto;
+  max-width: 540px;
+}
+
+.form {
+  background-color: #19ba99;
+  border-radius: 10px;
+  height: 104px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.form input {
+  background-color: #65c4ae;
+  padding: 25px;
+  margin: 25px 50px 25px 25px;
+  height: 68px;
+  width: calc(100% - 32.5px);
+  border-radius: 7px 0 0 7px;
+  border-color: transparent;
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+  outline: none;
+  font-family: Roboto;
+  font-style: 20px;
+  line-height: 20px;
+  color: #fff;
+}
+.form input::placeholder {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+}
+.form button {
+  height: 68px;
+  width: 68px;
+  border-radius: 50%;
+  border-color: transparent;
+  color: #fff;
+  position: absolute;
+  right: 18px;
+  cursor: pointer;
+}
+.form button:before {
+  font-family: "icons";
+  content: "\e901";
+  color: #19ba99;
+  font-size: 20px;
+}
+.form--error .form__input {
+  background-color: #f1747a;
+}
+.form--error .form__submit {
+  cursor: not-allowed;
+}
+
+.list {
+  display: flex;
+  flex: 1 1 420px;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+.list__item {
+  height: 68px;
+  background-color: #fff;
+  box-shadow: 2px 2px #e4e8eb;
+  padding: 24px;
+  width: 86%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.list__item span {
+  position: relative;
+  color: #000;
+  font-size: 16px;
+  margin-right: auto;
+}
+.list__item__button {
+  background-color: #000;
+  border-radius: 50%;
+  padding: 8px;
+  border: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.list__item__button--remove {
+  background-color: transparent;
+  margin-right: 15px;
+}
+.list__item__button--remove:before {
+  font-family: "icons";
+  position: absolute;
+  left: 0;
+  content: "\e903";
+  color: #bdcac6;
+  font-size: 20px;
+}
+.list__item__button--remove:after {
+  content: "|";
+  color: #bdcac6;
+  font-size: 20px;
+  position: absolute;
+  right: -15px;
+}
+.list__item__button--remove:hover:before {
+  color: #c72924;
+}
+.list__item__button--check {
+  background-color: transparent;
+}
+.list__item__button--check:before {
+  content: "\e900";
+  font-family: "icons";
+  color: #19ba99;
+  font-size: 20px;
+  right: 0;
+  top: 0;
+}
+.list__item__button:hover {
+  cursor: pointer;
+}
+.list__item--checked span:before {
+  content: "";
+  border-top: 2px solid #19ba99;
+  position: absolute;
+  left: -5px;
+  right: -5px;
+  top: 8px;
+}
+.list__item--checked button.list__item__button--check:before {
+  background-color: #19ba99;
+  color: #fff;
+}
+
+/*# sourceMappingURL=style.css.map */

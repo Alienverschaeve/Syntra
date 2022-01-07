@@ -1,0 +1,49 @@
+/* variables */
+/* nesting */
+/* extend */
+/* mixins */
+/* partials */
+/*BEM*/
+
+@import "./base/variables";
+@import "./base/extends";
+@import "./base/mixins";
+
+.form{
+  display:flex;
+  justify-content:space-between;
+  &__input{
+  background-color:white;
+width:58%;
+  }
+  &__submit{
+    background-color:yellow;
+    width:38%;
+  }
+  &--error{
+    input[type="text"]{
+      background-color:red;
+  }
+}
+
+.list
+{
+  margin:20px 0px;
+  &__item
+  {
+        lists-style-type:square;
+        &__text{
+          color:green;
+        }
+        &__icon
+        {
+          font-family:icon;
+          position:relative;
+          &--garbage{
+            content:"\e900";
+          }
+          &--edit{
+            content:"\e900";
+          }
+        }
+      }}

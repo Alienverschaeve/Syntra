@@ -1,0 +1,102 @@
+Oefeningen SQL
+Oef 1. 
+Select * from language
+order by name;
+
+Oef 2. 
+Select first_name, last_name
+from actor
+Where last_name Like "%SON%"
+Order by first_name;
+
+Oef 3.
+Select address_id, address, postal_code, district
+from address
+Where postal_code  = "";
+
+
+Oef 4.
+Select first_name, last_name, f.title, f.release_year
+from actor
+inner join film_actor fa on actor.actor_id = fa.actor_id
+inner join film f on fa.film_id = f.film_id
+Where description like "%crocodile%" or description like "%Shark%"
+order by first_name;
+
+Oef 5. 
+Select count(film_id)
+from film
+where description like "%crocodile%" or description like "%shark%"
+
+Oef 5. 
+Select title, count(actor.actor_id)
+(select sum(amount) from inventory inner join rental on inventory.inventory_id = rental.inventory_id inner join payment p on rental.rental_id = p.rental_id
+ Where inventory.film_id=film.film_id group by inventory.film_id)
+    from film inner join film_actor ON film.film_id = film_actor.film_id
+                                       inner join actor ON film_actor.actor_id=actor.actor_id
+group by film.film_id
+
+Oef. 
+select first_name, last_name, "ACTEUR" as oorsprong
+from actor
+where first_name = ( select first_name
+from actor
+where actor_id = 8 )
+and actor_id != 8
+UNION
+select first_name, last_name, "KLANT" as oorsprong
+from customer
+where first_name = (
+select first_name
+from actor
+where actor_id = 8
+)
+
+
+Oef 10. 
+select f.title,
+(select sum(amount) from payment as p
+inner join rental r on p.rental_id = r.rental_id
+inner join inventory i on r.inventory_id = i.inventory_id
+inner join film f2 on i.film_id = f2.film_id
+where f2.film_id = f.film_id) as totaal,
+(select count(*) from film_actor
+where film_actor.film_id = f.film_id) as aantal_acteurs
+from film as f
+GROUP BY f.film_id
+ORDER BY aantal_acteurs DESC
+LIMIT 10
+
+
+Oef 11. 
+select l.country, count(c.customer_id) as aantal_klanten from country l
+inner join city s on l.country_id = s.country_id
+inner join address a on s.city_id = a.city_id
+inner join customer c on a.address_id = c.address_id
+GROUP BY l.country_id
+order by aantal_klanten desc
+limit 10 
+OF 
+Oef 11.
+select count(customer_id), country.country
+from customer
+inner join address on customer.address_id = address.address_id
+inner join city on address.city_id = city.city_id
+inner join country on city.country_id = country.country_id
+group by country.country
+order by count(customer_id) desc
+limit 10;
+
+Oef 12. 
+select
+customer.customer_id,
+first_name,
+last_name,
+(select sum(amount)
+from payment
+where month(payment_date)=7
+and year(payment_date)=2005
+and payment.customer_id=customer.customer_id) as betaald
+from customer
+order by betaald desc
+limit 10

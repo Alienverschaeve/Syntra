@@ -1,0 +1,60 @@
+* {
+  margin: 0; /* marge van het volledige document 0 */
+  box-sizing: border-box; /* Dit zorgt ervoor dat je wanden inbegrepen in de grootte zijn van je box en padding*/
+  font-family: Arial, Helvetica, sans-serif; /*website font*/
+}
+body {
+  background-color: black; /* Achtergrondkleur body Zwart*/
+}
+main {
+  width: 1000px; /*breedte*/
+  background-color: #fff; /* achtergrondkleur van main*/
+  margin: 0 auto; /* TRBL Margin */
+  padding: 40px 70px 28px 70px;
+  max-width: 80%;
+}
+h1 {
+  color: black;
+  font-size: 35px;
+  font-weight: bold;
+  box-sizing: border-box; /*Padding en border binnen de width staan*/
+  margin-bottom: 5px;
+}
+h2 {
+  color: #ff1b30;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 26px;
+}
+p {
+  font-size: 16px;
+  color: black;
+  line-height: 22px;
+  padding: 12px;
+}
+img {
+  display: block;
+  margin: 0 auto;
+}
+img.car
+{max-width 100%}
+
+ul li {
+  line-height: 30px;
+  font-size: 16px;
+}
+ul {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 25px;
+}
+li {
+  list-style-image: url(../images/bg_listitem.jpg);
+}
+
+@media screen and  (max-width: 400px
+main{
+  padding: 5px;
+}
