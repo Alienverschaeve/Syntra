@@ -1,9 +1,14 @@
-string_cut = function (str, size) {
-  if (str == null) return [];
-  str = String(str);
-  size = ~~size;
-  return size > 0 ? str.match(new RegExp(".{1," + size + "}", "g")) : [str];
-};
-console.log(string_cut("check"));
-console.log(string_cut("check", 2));
-console.log(string_cut("check", 3));
+function string_chop(str, nr = 0) {
+  if (nr === 0) {
+    return [str];
+  } else {
+    const stukskes = [];
+    const aantalKeerDoorlopen = Math.ceil(str.length / nr);
+    for (let i = 0; i < aantalKeerDoorlopen; i++) {
+      stukskes.push(str.substr(nr * i, nr));
+    }
+    return stukskes;
+  }
+}
+console.log(string_chop("w3resource", 2));
+console.log(string_chop("sandri", 4));

@@ -1,11 +1,10 @@
-email = function (email) {
-  var avg, splitted, part1, part2;
-  splitted = email.split("@");
-  part1 = splitted[0];
-  avg = part1.length / 2;
-  part1 = part1.substring(0, part1.length - avg);
-  part2 = splitted[1];
-  return part1 + "...@" + part2;
-};
 
-console.log(email("alien.verschaeve@example.com"));
+function protect_email(email) {
+  let maskedEmail = "";
+  // const eersteDeel = email.substring(0,email.indexOf("@"))
+  // const tweedeDeel = email.substring(email.indexOf("@"))
+  const delen = email.split("@");
+  const aantalTeNemenKarakters = Math.floor(delen[0].length / 2); //robin_singh
+  const eersteDeel = delen[0].substr(0, aantalTeNemenKarakters);
+  maskedEmail = eersteDeel + "...@" + delen[1];
+  return maskedEmail;
