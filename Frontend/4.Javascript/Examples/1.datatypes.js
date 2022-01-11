@@ -22,5 +22,5 @@ const persoon ={
 $persoon=["firstname"-->"Bart", "lastname"-->"Verbomen", age--> 34]
 //function
 function sum(a,b){
-//ontbrekend video 17.12 na 1 u
+return a+b
 }
